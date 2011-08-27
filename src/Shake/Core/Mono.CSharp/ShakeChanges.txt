@@ -1,0 +1,7 @@
+eval.cs:
+========
+1. Supporting class-level declarations enabled
+2. public static CompilerContext ctx;
+3. public static string FileName = "{interactive}";
+4. Location.AddFile(null, FileName);
+5. current_debug_name = FileName + (count++) + ".dll";

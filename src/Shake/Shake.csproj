@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B3AF102-211A-40F0-BA98-0587BBCD31A1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shake</RootNamespace>
+    <AssemblyName>shake</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NET_4_0;MS_COMPATIBLE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>TRACE;NET_4_0;MS_COMPATIBLE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Shake.Core.ShakeApp</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\lib\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\ShakeConsts.cs" />
+    <Compile Include="Core\ShakeErrors.cs" />
+    <Compile Include="Helpers\ApiClassWrapper.cs" />
+    <Compile Include="Tasks\DependsAttribute.cs" />
+    <Compile Include="Helpers\TextWriterLogger.cs" />
+    <Compile Include="Helpers\DynamicProperties.cs" />
+    <Compile Include="Helpers\EnvironmentHelper.cs" />
+    <Compile Include="Helpers\RegexHelper.cs" />
+    <Compile Include="Interfaces\IShakeService.cs" />
+    <Compile Include="Interfaces\IShakeTask.cs" />
+    <Compile Include="Services\CommandLineService.cs" />
+    <Compile Include="Services\ProjectService.cs" />
+    <Compile Include="Tasks\Base\CommandLineTask.cs" />
+    <Compile Include="Tasks\Base\RevisionControlTask.cs" />
+    <Compile Include="Tasks\SvnTask.cs" />
+    <Compile Include="Core\ShakeRunner.cs" />
+    <Compile Include="Core\Mono.CSharp\class\corlib\Mono.Security.Cryptography\CryptoConvert.cs" />
+    <Compile Include="Core\Mono.CSharp\class\Mono.CompilerServices.SymbolWriter\MonoSymbolFile.cs" />
+    <Compile Include="Core\Mono.CSharp\class\Mono.CompilerServices.SymbolWriter\MonoSymbolTable.cs" />
+    <Compile Include="Core\Mono.CSharp\class\Mono.CompilerServices.SymbolWriter\MonoSymbolWriter.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\anonymous.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\argument.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\assign.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\attribute.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\cfold.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\class.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\codegen.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\complete.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\const.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\constant.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\context.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\convert.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\cs-parser.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\cs-tokenizer.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\decl.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\delegate.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\doc.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\driver.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\dynamic.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\ecore.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\enum.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\eval.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\expression.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\field.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\flowanalysis.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\generic.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\import.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\iterators.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\lambda.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\linq.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\literal.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\location.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\membercache.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\method.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\modifiers.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\namespace.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\nullable.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\parameter.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\pending.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\property.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\report.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\rootcontext.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\roottypes.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\statement.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\support.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\symbolwriter.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\typemanager.cs" />
+    <Compile Include="Core\Mono.CSharp\mcs\typespec.cs" />
+    <Compile Include="Core\Mono.CSharp\tools\monop\outline.cs" />
+    <Compile Include="Core\ShakeApp.cs" />
+    <Compile Include="Helpers\ProcessWrapper.cs" />
+    <Compile Include="Helpers\ReflectionHelper.cs" />
+    <Compile Include="Core\ShakeArgs.cs" />
+    <Compile Include="Helpers\ExtensionMethods.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tasks\AssemblyInfoTask.cs" />
+    <Compile Include="Tasks\FileTask.cs" />
+    <Compile Include="Tasks\MsBuildTask.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
